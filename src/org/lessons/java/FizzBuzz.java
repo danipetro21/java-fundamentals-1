@@ -1,2 +1,4 @@
-package org.lessons.java;public class FizzBuzz {
+package org.lessons.java;
+
+public class FizzBuzz {
 }
