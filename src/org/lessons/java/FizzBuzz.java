@@ -7,6 +7,16 @@ public class FizzBuzz {
     public static void main(String[] args) {
 
         Scanner keyboardReader = new Scanner(System.in);
+
+
+        //init costanti
+        int numMax = 1000;
+        int numMin = 0;
+        int mod3 = 3;
+        int mod5 = 5;
+
+
+
         int number;
 
         do  {
@@ -14,11 +24,11 @@ public class FizzBuzz {
             System.out.print("inserisci il numero di numeri da stampare compreso tra 0 e 1000: ");
             number = keyboardReader.nextInt();
 
-            if (number < 0 || number > 1000){
+            if (number < numMin || number > numMax){
                 System.out.println("noooo!! tra 0 e 1000");
             }
 
-        } while (number < 0 || number > 1000 );
+        } while (number < numMin || number > numMax );
 
 
 
@@ -29,11 +39,11 @@ public class FizzBuzz {
 
             numbers[i] = i + 1;
 
-            if (numbers[i] % 3 == 0 && numbers[i] % 5 == 0) {
+            if (numbers[i] % mod3 == 0 && numbers[i] % mod5 == 0) {
                 System.out.println("FizzBuzz");
-            } else if (numbers[i] % 5 == 0) {
+            } else if (numbers[i] % mod5 == 0) {
                 System.out.println("Buzz");
-            } else if (numbers[i] % 3 == 0) {
+            } else if (numbers[i] % mod3 == 0) {
                 System.out.println("Fizz");
             } else {
                 System.out.println(numbers[i]);
